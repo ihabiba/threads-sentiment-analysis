@@ -126,8 +126,9 @@ That’s why everything after is still broken.
 
 ---
 
-```markdown
 ## 📁 Project Structure
+
+```markdown
 
 ```text
 threads_sentiment_project/
@@ -157,7 +158,7 @@ threads_sentiment_project/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 
 ---
 
