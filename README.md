@@ -148,6 +148,7 @@ threads_sentiment_project/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```text
 
 ---
 
