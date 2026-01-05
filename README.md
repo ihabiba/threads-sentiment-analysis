@@ -26,6 +26,27 @@ limitations, and deployment considerations.
 
 ---
 
+## 🧰 Tech Stack
+
+### Languages & Libraries
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn)
+![NumPy](https://img.shields.io/badge/NumPy-numerical-blue?logo=numpy)
+![Pandas](https://img.shields.io/badge/Pandas-data-green?logo=pandas)
+![SciPy](https://img.shields.io/badge/SciPy-scientific-lightgrey?logo=scipy)
+![NLTK](https://img.shields.io/badge/NLTK-NLP-yellow)
+![Joblib](https://img.shields.io/badge/Joblib-serialization-red)
+
+### Visualization
+![Matplotlib](https://img.shields.io/badge/Matplotlib-visualization-blue)
+![Seaborn](https://img.shields.io/badge/Seaborn-visualization-lightblue)
+
+### Deployment
+![Streamlit](https://img.shields.io/badge/Streamlit-webapp-ff4b4b?logo=streamlit)
+![Streamlit Cloud](https://img.shields.io/badge/Streamlit-Cloud-lightgrey)
+
+---
+
 ## 🧠 Methodology
 
 ### 1️⃣ Data Processing & EDA
@@ -94,27 +115,6 @@ The project includes an interactive **Streamlit app** with:
 - Methodology summary
 - Known limitations
 - Academic justification
-
----
-
-## 🧰 Tech Stack
-
-### Languages & Libraries
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn)
-![NumPy](https://img.shields.io/badge/NumPy-numerical-blue?logo=numpy)
-![Pandas](https://img.shields.io/badge/Pandas-data-green?logo=pandas)
-![SciPy](https://img.shields.io/badge/SciPy-scientific-lightgrey?logo=scipy)
-![NLTK](https://img.shields.io/badge/NLTK-NLP-yellow)
-![Joblib](https://img.shields.io/badge/Joblib-serialization-red)
-
-### Visualization
-![Matplotlib](https://img.shields.io/badge/Matplotlib-visualization-blue)
-![Seaborn](https://img.shields.io/badge/Seaborn-visualization-lightblue)
-
-### Deployment
-![Streamlit](https://img.shields.io/badge/Streamlit-webapp-ff4b4b?logo=streamlit)
-![Streamlit Cloud](https://img.shields.io/badge/Streamlit-Cloud-lightgrey)
 
 ---
 
