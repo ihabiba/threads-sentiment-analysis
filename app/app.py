@@ -5,7 +5,6 @@ import streamlit as st
 import numpy as np
 import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
-from nltk.corpus import stopwords
 from scipy.sparse import hstack
 from PIL import Image
 
@@ -14,8 +13,6 @@ try:
     nltk.data.find("sentiment/vader_lexicon.zip")
 except LookupError:
     nltk.download("vader_lexicon")
-
-
 
 # App config
 st.set_page_config(
@@ -53,15 +50,12 @@ def load_artifacts():
 
 artifacts = load_artifacts()
 
-# Text preprocessing (deployment-safe)
-stop_words = set(stopwords.words("english"))
-
+# Text preprocessing (deployment-safe, NO stopwords)
 def preprocess_text(text: str) -> str:
     text = text.lower()
     text = re.sub(r"http\S+|www\S+", "", text)
     text = re.sub(r"[^a-z\s]", "", text)
-    tokens = [w for w in text.split() if w not in stop_words]
-    return " ".join(tokens)
+    return " ".join(text.split())
 
 # Tabs
 tab1, tab2, tab3 = st.tabs(
@@ -120,11 +114,11 @@ with tab1:
 
             # Color-coded output
             if prediction == "positive":
-                st.success(f"🟢 **Predicted Sentiment: POSITIVE**")
+                st.success("🟢 **Predicted Sentiment: POSITIVE**")
             elif prediction == "neutral":
-                st.info(f"🔵 **Predicted Sentiment: NEUTRAL**")
+                st.info("🔵 **Predicted Sentiment: NEUTRAL**")
             else:
-                st.error(f"🔴 **Predicted Sentiment: NEGATIVE**")
+                st.error("🔴 **Predicted Sentiment: NEGATIVE**")
 
             if model_choice.startswith("Logistic"):
                 st.caption(f"Confidence: {confidence:.2f}")
@@ -180,7 +174,7 @@ with tab3:
     st.markdown("### Methods Used")
     st.write(
         """
-        - Text preprocessing (normalization, stopword removal)
+        - Text preprocessing (normalization)
         - TF-IDF vectorization (unigrams + bigrams)
         - Lexicon-based sentiment features (VADER)
         - Classical ML models (Logistic Regression, Linear SVM, Naive Bayes)
