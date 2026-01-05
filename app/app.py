@@ -3,10 +3,19 @@ import re
 import joblib
 import streamlit as st
 import numpy as np
+import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from scipy.sparse import hstack
 from PIL import Image
+
+# Ensure VADER lexicon is available (Streamlit Cloud fix)
+try:
+    nltk.data.find("sentiment/vader_lexicon.zip")
+except LookupError:
+    nltk.download("vader_lexicon")
+
+
 
 # App config
 st.set_page_config(
